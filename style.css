@@ -1,0 +1,106 @@
+:root {
+    --fieldSize: 700px;
+    --unitSize: calc(var(--fieldSize) / 8);
+    --primary: #fff;
+    --secondary: #015b01;
+}
+
+body {
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+}
+
+.container {
+    width: calc(var(--fieldSize) + var(--unitSize));
+    height: calc(var(--fieldSize) + var(--unitSize));
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.field {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: var(--fieldSize);
+    max-width: var(--fieldSize);
+    height: var(--fieldSize);
+    max-height: var(--fieldSize);
+    background-color: var(--primary);
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 100%;
+    width: var(--unitSize);
+    height: var(--unitSize);
+}
+
+.row:nth-child(2n) {
+    background-color: var(--secondary);
+}
+
+.row:nth-child(2n+1) .column:nth-child(2n) {
+    background-color: var(--secondary);
+}
+
+.row:nth-child(2n) .column:nth-child(2n) {
+    background-color: var(--primary);
+}
+
+.column {
+    width: var(--unitSize);
+    height: var(--unitSize);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.column img {
+    width: 65px;
+    height: 65px;
+    cursor: pointer;
+}
+
+.numbers,
+.letters {
+    display: flex;
+    color: var(--primary);
+}
+
+.numbers {
+    flex-direction: column;
+    height: var(--fieldSize);
+    min-height: var(--fieldSize);
+    width: var(--unitSize);
+}
+
+.letters {
+    margin-left: var(--unitSize);
+    flex-direction: row;
+    height: var(--unitSize);
+    width: var(--fieldSize);
+}
+
+.letters div,
+.numbers div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--unitSize);
+    height: var(--unitSize);
+    min-width: var(--unitSize);
+    min-height: var(--unitSize);
+}
+
+.highlight {
+    -moz-box-shadow: inset 0px 0px 45px #5000ff;
+    -webkit-box-shadow: inset 0px 0px 45px #5000ff;
+    box-shadow: inset 0px 0px 45px #5000ff;
+}

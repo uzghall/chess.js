@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess.js</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="numbers">
+            <div>
+                <p>8</p>
+            </div>
+            <div>
+                <p>7</p>
+            </div>
+            <div>
+                <p>6</p>
+            </div>
+            <div>
+                <p>5</p>
+            </div>
+            <div>
+                <p>4</p>
+            </div>
+            <div>
+                <p>3</p>
+            </div>
+            <div>
+                <p>2</p>
+            </div>
+            <div>
+                <p>1</p>
+            </div>
+        </div>
+        <div class="field">
+            <div class="row">
+                <div class="column" coordinate="0,0" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="torrePretaEsq" src="img/torre_preta.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Torre"></div>
+                <div class="column" coordinate="0,1" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="cavaloPretoEsq" src="img/cavalo_preto.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Cavalo"></div>
+                <div class="column" coordinate="0,2" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="bispoPretoEsq" src="img/bispo_preto.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Bispo"></div>
+                <div class="column" coordinate="0,3" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="rainhaPreta" src="img/rainha_preta.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Rainha"></div>
+                <div class="column" coordinate="0,4" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="reiPreto" src="img/rei_preto.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Rei">
+                </div>
+                <div class="column" coordinate="0,5" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="bispoPretoDir" src="img/bispo_preto.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Bispo"></div>
+                <div class="column" coordinate="0,6" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="cavaloPretoDir" src="img/cavalo_preto.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Cavalo"></div>
+                <div class="column" coordinate="0,7" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="torrePretaDir" src="img/torre_preta.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Torre"></div>
+            </div>
+            <div class="row">
+                <div class="column" coordinate="1,0" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="blackPawn1" src="img/peao_preto.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao">
+                </div>
+                <div class="column" coordinate="1,1" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="blackPawn2" src="img/peao_preto.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao">
+                </div>
+                <div class="column" coordinate="1,2" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="blackPawn3" src="img/peao_preto.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao">
+                </div>
+                <div class="column" coordinate="1,3" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="blackPawn4" src="img/peao_preto.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao">
+                </div>
+                <div class="column" coordinate="1,4" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="blackPawn5" src="img/peao_preto.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao">
+                </div>
+                <div class="column" coordinate="1,5" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="blackPawn6" src="img/peao_preto.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao">
+                </div>
+                <div class="column" coordinate="1,6" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="blackPawn7" src="img/peao_preto.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao">
+                </div>
+                <div class="column" coordinate="1,7" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="blackPawn8" src="img/peao_preto.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao">
+                </div>
+            </div>
+            <div class="row">
+                <div class="column" coordinate="2,0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="2,1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="2,2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="2,3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="2,4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="2,5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="2,6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="2,7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="row">
+                <div class="column" coordinate="3,0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="3,1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="3,2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="3,3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="3,4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="3,5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="3,6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="3,7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="row">
+                <div class="column" coordinate="4,0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="4,1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="4,2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="4,3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="4,4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="4,5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="4,6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="4,7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="row">
+                <div class="column" coordinate="5,0" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="5,1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="5,2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="5,3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="5,4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="5,5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="5,6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+                <div class="column" coordinate="5,7" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            </div>
+            <div class="row">
+                <div class="column" coordinate="6,0" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="peaoBranco1" src="img/peao_branco.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao"></div>
+                <div class="column" coordinate="6,1" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="peaoBranco2" src="img/peao_branco.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao"></div>
+                <div class="column" coordinate="6,2" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="peaoBranco3" src="img/peao_branco.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao"></div>
+                <div class="column" coordinate="6,3" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="peaoBranco4" src="img/peao_branco.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao"></div>
+                <div class="column" coordinate="6,4" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="peaoBranco5" src="img/peao_branco.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao"></div>
+                <div class="column" coordinate="6,5" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="peaoBranco6" src="img/peao_branco.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao"></div>
+                <div class="column" coordinate="6,6" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="peaoBranco7" src="img/peao_branco.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao"></div>
+                <div class="column" coordinate="6,7" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="peaoBranco8" src="img/peao_branco.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Peao"></div>
+            </div>
+            <div class="row">
+                <div class="column" coordinate="7,0" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="torreBrancaEsq" src="img/torre_branca.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Torre"></div>
+                <div class="column" coordinate="7,1" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="CavaloBrancoEsq" src="img/cavalo_branco.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Cavalo"></div>
+                <div class="column" coordinate="7,2" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="BispoBrancoEsq" src="img/bispo_branco.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Bispo"></div>
+                <div class="column" coordinate="7,3" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="rainhaBranca" src="img/rainha_branca.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Rainha"></div>
+                <div class="column" coordinate="7,4" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="reiBranco" src="img/rei_branco.svg" draggable="true"
+                        ondragstart="drag(event)" alt="Rei">
+                </div>
+                <div class="column" coordinate="7,5" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="biscoBrancoDir" src="img/bispo_branco.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Bispo"></div>
+                <div class="column" coordinate="7,6" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="cavaloBrancoDir" src="img/cavalo_branco.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Cavalo"></div>
+                <div class="column" coordinate="7,7" ondrop="drop(event)" ondragover="allowDrop(event)"><img
+                        onclick="showTips(event)" moved="f" id="torreBrancaDir" src="img/torre_branca.svg"
+                        draggable="true" ondragstart="drag(event)" alt="Torre"></div>
+            </div>
+        </div>
+        <div class="letters">
+            <div>
+                <p>a</p>
+            </div>
+            <div>
+                <p>b</p>
+            </div>
+            <div>
+                <p>c</p>
+            </div>
+            <div>
+                <p>d</p>
+            </div>
+            <div>
+                <p>e</p>
+            </div>
+            <div>
+                <p>f</p>
+            </div>
+            <div>
+                <p>g</p>
+            </div>
+            <div>
+                <p>h</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
