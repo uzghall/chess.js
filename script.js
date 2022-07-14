@@ -35,6 +35,9 @@ function showTips(ev) {
     if (selectedPiece.includes("blackPawn")) {
         highlightBlackPawnChoices(selectedPiece, spotCoordinates, alreadyMoved);
     }
+    if (selectedPiece.includes("peaoBranco")) {
+        highlightPeaoBrancoChoices(selectedPiece, spotCoordinates, alreadyMoved);
+    }
 }
 
 function highlightBlackPawnChoices(pieceHtmlId, spotCoordinates, alreadyMoved) {
@@ -49,6 +52,25 @@ function highlightBlackPawnChoices(pieceHtmlId, spotCoordinates, alreadyMoved) {
             spotTwo[0].classList.add("highlight");
         } else {
             var value1 = '[coordinate="' + (parseInt(spotCoordinates[0]) + 1) + ',' + spotCoordinates[1] + '"]';
+            var spotOne = document.querySelectorAll(value1);
+            spotOne[0].classList.add("highlight");
+        }
+    }
+
+}
+
+function highlightPeaoBrancoChoices(pieceHtmlId, spotCoordinates, alreadyMoved) {
+
+    if (pieceHtmlId.includes("peaoBranco")) {
+        if (alreadyMoved === "f") {
+            var value1 = '[coordinate="' + (parseInt(spotCoordinates[0]) - 1) + ',' + spotCoordinates[1] + '"]';
+            var value2 = '[coordinate="' + (parseInt(spotCoordinates[0]) - 2) + ',' + spotCoordinates[1] + '"]';
+            var spotOne = document.querySelectorAll(value1);
+            var spotTwo = document.querySelectorAll(value2);
+            spotOne[0].classList.add("highlight");
+            spotTwo[0].classList.add("highlight");
+        } else {
+            var value1 = '[coordinate="' + (parseInt(spotCoordinates[0]) - 1) + ',' + spotCoordinates[1] + '"]';
             var spotOne = document.querySelectorAll(value1);
             spotOne[0].classList.add("highlight");
         }
